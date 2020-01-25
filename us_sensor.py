@@ -14,22 +14,24 @@ while True:
     time.sleep(1)
     GPIO.output(TRIG, True)
     time.sleep(0.01)
-    GPIO.sleep(TRIG, False)
+    GPIO.output(TRIG, False)
 
-        while GPIO.input(ECHO)==0:
-            pulse_start = time.time()
+    while GPIO.input(ECHO)==0:
+        pulse_start = time.time()
 
-        while GPIO.input(ECHO)==1:
-            pulse_end = time.time()
+    while GPIO.input(ECHO)==1:
+        pulse_end = time.time()
 
-        pulse_duration = pulse_end - pulse_start
+    pulse_duration = pulse_end - pulse_start
 
-        distance = pulse_duration * 17150
-        distance = round(distance, 2)
+    distance = pulse_duration * 17150
+    distance = round(distance, 2)
 
-        if(distance >=10):
-            GPIO.output(led, GPIO.LOW)
-            #GPIO.output(buzzer, GPIO.HIGH)
-        else:
-            GPIO.output(led, GPIO.HIGH)
-            #GPIO.output(lbuzzered, GPIO.HIGH)
+    if(distance >=10):
+        GPIO.output(led, GPIO.LOW)
+        print ("10 se jyadaa")
+        #GPIO.output(buzzer, GPIO.HIGH)
+    else:
+        GPIO.output(led, GPIO.HIGH)
+        print ("10 se kam")
+        #GPIO.output(lbuzzered, GPIO.HIGH)

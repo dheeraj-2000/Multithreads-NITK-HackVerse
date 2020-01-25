@@ -18,7 +18,6 @@ def main():
             us.flee_animals ()
         else:
             print ("NO ANIMAL !!")
-        break
 
 
 if __name__ == "__main__":

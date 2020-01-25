@@ -1,4 +1,4 @@
-import RPi.GPIO as IO
+import RPi.GPIO as GPIO
 import sys
 sys.path.append('./picam')
 import capture as pic
@@ -6,12 +6,12 @@ import capture as pic
 
 def detect():
     
-    IO.setwarnings(False)
-    IO.setmode(IO.BCM)
-    IO.setup(8, IO.IN)
-    IO.setup(3, IO.OUT)
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(14, GPIO.IN)
+    GPIO.setup(2, GPIO.OUT)
     while 1:
-        if(IO.input(8) == False):
+        if(GPIO.input(14) == False):
             print("Motion detected !!")
             #IO.output(3, True)
             #for i in range(10):

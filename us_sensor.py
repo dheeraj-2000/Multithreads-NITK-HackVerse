@@ -7,7 +7,7 @@ def flee_animals ():
     GPIO.setwarnings(False)
     TRIG = 18
     ECHO = 24
-    buzzer = 3
+    buzzer = 23
     led = 2
 
     GPIO.setup(TRIG, GPIO.OUT)
@@ -43,3 +43,5 @@ def flee_animals ():
             GPIO.output(led, GPIO.HIGH)
             GPIO.output(buzzer, GPIO.HIGH)
             print ("10 se kam, Fleeing animal!!!")
+
+

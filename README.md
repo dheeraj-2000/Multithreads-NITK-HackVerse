@@ -10,7 +10,7 @@ To run the project follow the commands listed below
  git clone https://github.com/YOUR_USERNAME/Multithreads-NITK-HackVerse.git
  ```
  
- <h2 align="left">Prerequisites</h1>
+ ### Prerequisites
 
 **Step 3** Before running the application, install the following requirements-
 

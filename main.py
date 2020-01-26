@@ -6,8 +6,8 @@ sys.path.append ('./ir')
 import  ir_detect as ir
 sys.path.append ('./detection')
 import detect
-account_sid = 'ACf94e3012dc18dedd2fec43e113873740'
-auth_token = '97d396cc9b9186568c74c20a2a5b4225'
+account_sid = 'YOUR_SID'
+auth_token = 'YOUR_TOKEN'
 client = Client(account_sid, auth_token)
 
 

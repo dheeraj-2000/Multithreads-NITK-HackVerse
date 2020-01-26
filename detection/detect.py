@@ -3,7 +3,7 @@ import unicodedata
 
 def detect_animals (D):
     count = 0
-    app = ClarifaiApp(api_key="1ed137256fde4eb08dc79847c0506eef")
+    app = ClarifaiApp(api_key="YOUR_APK")
 
 
 

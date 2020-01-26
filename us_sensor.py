@@ -32,10 +32,10 @@ def flee_animals ():
 
         if(distance >=10):
             GPIO.output(led, GPIO.LOW)
-            print ("10 se jyadaa")
+            print ("Animal ran away !!")
             return
             #GPIO.output(buzzer, GPIO.HIGH)
         else:
             GPIO.output(led, GPIO.HIGH)
-            print ("10 se kam, Fleeing animal!!!")
+            print ("Scaring Animal !!")
             #GPIO.output(lbuzzered, GPIO.HIGH)

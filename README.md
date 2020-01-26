@@ -32,7 +32,8 @@ python3 main.py
   * Sytem is ready to work, you can test it by bringing something near the camera e.g, if its any animal picture then it will start the ultrasonic transmittor and buzzer until the animal goes out of the range of Ultrasonic transmitter.
 The system will also make an emergency call. 
   * If it is a non-animal picture, the system will do print 'No Animal !!' on the terminal screen and go back to initial state of detecting movement using IR sensor
-  ** few puctures of our model
+  
+  **few puctures of our model**
   
   ![alt text](https://github.com/dheeraj-2000/Multithreads-NITK-HackVerse/blob/master/Prototype_model1.jpeg)
   ![alt text](https://github.com/dheeraj-2000/Multithreads-NITK-HackVerse/blob/master/Prototype_model%202.jpeg)

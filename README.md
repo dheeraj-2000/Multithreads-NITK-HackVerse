@@ -33,7 +33,7 @@ python3 main.py
 The system will also make an emergency call. 
   * If it is a non-animal picture, the system will do print 'No Animal !!' on the terminal screen and go back to initial state of detecting movement using IR sensor
   
-  **few puctures of our model**
+  **few pictures of our model**
   
   ![alt text](https://github.com/dheeraj-2000/Multithreads-NITK-HackVerse/blob/master/Prototype_model1.jpeg)
   ![alt text](https://github.com/dheeraj-2000/Multithreads-NITK-HackVerse/blob/master/Prototype_model%202.jpeg)

@@ -1,21 +1,35 @@
 import us_sensor as us
 import sys
+from twilio.rest import Client
 sys.path.append ('./ir')
 import  ir_detect as ir
 sys.path.append ('./detection')
 import detect
+account_sid = 'ACf94e3012dc18dedd2fec43e113873740'
+auth_token = '97d396cc9b9186568c74c20a2a5b4225'
+client = Client(account_sid, auth_token)
+
+
+
 
 def main():
 
     print ("System ON !!")
     while 1:
-
+        D = {'animal':0 ,'cheetah':0,'leopard':0,'mammal':0,'wildlife':0,'elephant':0}
         ir.detect()
         print("Detecting...")
-        count = detect.detect_animals()
+        D,count = detect.detect_animals(D)
         if (count):
             print (count)
+            call = client.calls.create(
+                      url='https://handler.twilio.com/twiml/EHee56782cafb80d205d3e817bf0514a71',
+                     from_='+12015483755',
+                     to='+919920650665'
+                 )
+            print(call.sid)
             us.flee_animals ()
+            
         else:
             print ("NO ANIMAL !!")
 

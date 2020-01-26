@@ -1,7 +1,7 @@
 from clarifai.rest import ClarifaiApp ,Video
 import unicodedata
 
-def detect_animals ():
+def detect_animals (D):
     count = 0
     app = ClarifaiApp(api_key="1ed137256fde4eb08dc79847c0506eef")
 
@@ -34,10 +34,13 @@ def detect_animals ():
     #concepts = response['outputs'][0]['data']['concepts']
     for i in range (10):
         concepts2 = custom_response[i]['outputs'][0]['data']['concepts']
+        if count > 0:
+            break
         for concept in concepts2:
             if concept['name'] == 'animal' and concept["value"] >= 0.70 or concept['name'] == 'cheetah' and concept["value"] >= 0.70 or concept['name'] == 'leopard' and concept["value"] >= 0.70 or concept['name'] == 'elephant' and concept["value"] >= 0.70 or concept['name'] == 'mammal' and concept["value"] >= 0.70 or concept['name'] == 'wildlife' and concept["value"] >= 0.70 :
+               D[concept['name']] = D[concept['name']] + 1
                print(concept['name'].encode('ascii','ignore'),concept['value']) 
                count = count+1
                #print(count)
     
-    return count
+    return D,count
